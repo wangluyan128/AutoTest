@@ -1,0 +1,15 @@
+suite\multiThread\MuliThreadOnXml.class
+suite\ignoreTest.class
+suite\paramter\ParamterTest.class
+suite\SuiteConfig.class
+suite\multiThread\MultiThreadOnAnnotion.class
+suite\groups\GroupsOnClass2.class
+suite\groups\GroupsOnClass3.class
+suite\TimeoutTest.class
+suite\ExceptedException.class
+suite\groups\GroupsOnClass1.class
+suite\PayTest.class
+suite\groups\GroupsOnMethod.class
+suite\paramter\DataProviderTest.class
+suite\LoginTest.class
+suite\DependTest.class
