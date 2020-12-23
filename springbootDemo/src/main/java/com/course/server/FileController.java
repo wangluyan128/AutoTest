@@ -16,12 +16,12 @@ public class FileController {
 
     @PostMapping("/upload")
     @ResponseBody
-    public String upload(@RequestParam("file") MultipartFile file, @RequestParam("name") String name) {
+    public String upload(@RequestParam("file") MultipartFile file) {//, @RequestParam("name") String name
         String filename = "";
         try {
             //上传目录地址 自定义
-            String uploadDir = "d:/file_spring/" + name + "/";
-
+            //String uploadDir = "d:/file_spring/" + name + "/";
+            String uploadDir = "d:/file_spring/";
             //如果目录不存在，自动创建文件夹
             File dir = new File(uploadDir);
             if (!dir.exists()) {
@@ -44,7 +44,6 @@ public class FileController {
         String filename = UUID.randomUUID() + suffix;
         //服务器端保存的文件对象
         File serverFile = new File(uploadDir + filename);
-
         if (!serverFile.exists()) {
             //先得到文件的上级目录，并创建上级目录，在创建文件
             serverFile.getParentFile().mkdir();
