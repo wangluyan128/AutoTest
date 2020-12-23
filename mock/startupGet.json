@@ -20,7 +20,21 @@
       }
     },
     "response": {
-      "text": "我胡汉三又回来了"
+      "text": "hello world"
+    }
+  },
+  {
+    "description": "模拟一个带请求头的get请求",
+    "request": {
+      "uri": "/get/with/headers",
+      "method": "get",
+      "headers": {
+        "content-type": "application/json"
+      }
+    },
+    "response": {
+      "text": "hello world"
     }
   }
+
 ]

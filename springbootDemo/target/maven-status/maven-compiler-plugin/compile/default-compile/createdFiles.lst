@@ -2,5 +2,6 @@ com\example\demo\DemoApplication.class
 com\course\bean\User.class
 com\course\config\SwaggerConfig.class
 com\course\server\MyGetMethod.class
+com\course\server\FileController.class
 Application.class
 com\course\server\MyPostMethod.class

@@ -22,6 +22,47 @@
     "response": {
       "text": "我胡汉三带着参数回来了"
     }
+  },
+  {
+    "description": "登录",
+    "request": {
+      "uri": "/postwithfrom",
+      "method": "post",
+      "forms": {
+        "username": "tom",
+        "password": "123456"
+      }
+    },
+    "response": {
+      "text": "login success"
+    }
+  },
+  {
+    "description": "文件下载",
+    "request": {
+      "uri": "/updown",
+      "method": "post"
+    },
+    "response": {
+      "attachment": {
+        "filename": "1.jpg",
+        "file": "e:/1.jpg"
+      }
+    }
+  },
+  {
+    "description": "文件上传",
+    "request": {
+      "uri": "/upload",
+      "method": "post",
+      "attachment": {
+          "filename": "1.jpg",
+          "file": "e:/1.jpg"
+        }
+    },
+    "response": {
+      "text": "上传成功"
+    }
   }
 
 ]

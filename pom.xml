@@ -21,6 +21,7 @@
         <module>autoview</module>
         <module>httpclientDemo</module>
         <module>ExcelDemo</module>
+        <module>logDemo</module>
     </modules>
 
 

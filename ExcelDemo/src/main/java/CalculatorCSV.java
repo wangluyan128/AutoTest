@@ -69,7 +69,7 @@ public class CalculatorCSV {
     //定义一个DataProvider
     @DataProvider(name = "testData")
     public static Object[][] tocsv() throws Exception{
-        return getData("D:\\work\\AutoTest\\ExcelDemo\\src\\main\\resources\\add.csv");
+        return getData("E:\\AutoTest\\ExcelDemo\\src\\main\\resources\\add.csv");
     }
 
 
