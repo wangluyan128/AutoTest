@@ -17,6 +17,12 @@ import java.util.Objects;
 
 public class MyGetMethod {
 
+    @RequestMapping(value = "/get",method = RequestMethod.GET)
+    @ApiOperation(value="测试get方法",httpMethod = "GET")
+    public String getValue(HttpServletResponse response){
+        return "The first Get!";
+    }
+
     @RequestMapping(value = "/getCookies",method = RequestMethod.GET)
     @ApiOperation(value = "通过这个方法可以获取到Cookies",httpMethod ="GET")
     public String getCookies(HttpServletResponse response){

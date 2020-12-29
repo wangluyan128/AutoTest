@@ -36,8 +36,33 @@ public class FileController {
         return filename;
     }
 
+
+    @PostMapping("/uploads")
+    public String fileUpload(@RequestParam("files")MultipartFile[] files){
+        String fileRootPath="d:/file_spring/";
+        String filePath = "";
+        // 多文件上传
+        for (MultipartFile file : files){
+            // 上传简单文件名
+            String originalFilename = file.getOriginalFilename();
+            // 存储路径
+            filePath = new StringBuilder(fileRootPath)
+                    .append(System.currentTimeMillis())
+                    .append(originalFilename)
+                    .toString();
+            try {
+                // 保存文件
+                file.transferTo(new File(filePath));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return filePath;
+    }
+
     private String executeUpload(String uploadDir, MultipartFile file) throws Exception {
         //文件后缀名
+        System.out.println(file.getOriginalFilename());
         int index = Objects.requireNonNull(file.getOriginalFilename()).lastIndexOf(".");
         String suffix = file.getOriginalFilename().substring(index);
         //上传文件名
