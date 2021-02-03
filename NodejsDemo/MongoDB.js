@@ -335,7 +335,7 @@ async function dataOperate(){
         await test.updateMany({'site':'runoob.com'},
             {$set:{'site':'example.com'}});
         //查询
-        arr = await test.find().toArray();
+        var arr = await test.find().toArray();
         console.log(err);
         //删除
         await test.deleteMany({'site':'example.com'});
