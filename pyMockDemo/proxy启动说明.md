@@ -90,5 +90,6 @@ usage: mitmproxy [options]
  mitmdump -s examples/add_header.py		#运行一个脚本
  mitmdump -ns example/add_header.py -r srcfile -w dstfile		#脚本化数据转换
  
+ 浏览器访问http://mitm.it
  netstat -ano|findstr 8800
  tasklist|findstr PID
