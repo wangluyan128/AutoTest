@@ -12,6 +12,7 @@
         <module name="autoview" />
         <module name="ExcelDemo" />
         <module name="httpclientDemo" />
+        <module name="RedisDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -21,16 +22,15 @@
       <module name="ExcelDemo" target="1.8" />
       <module name="httpclientDemo" target="1.8" />
       <module name="logDemo" target="1.8" />
+      <module name="RedisDemo" target="1.8" />
       <module name="springbootDemo" target="1.8" />
-      <module name="TestNGToExecl" target="1.8" />
-      <module name="TestNGToExeclDemo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-encoding utf-8" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ExcelDemo" options="-parameters" />
-      <module name="TestNGToExecl" options="-parameters" />
-      <module name="TestNGToExeclDemo" options="-parameters" />
+      <module name="RedisDemo" options="-parameters" />
       <module name="autoview" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="httpclientDemo" options="-parameters" />

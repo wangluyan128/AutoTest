@@ -22,6 +22,7 @@
         <module>httpclientDemo</module>
         <module>ExcelDemo</module>
         <module>logDemo</module>
+        <module>RedisDemo</module>
     </modules>
 
 

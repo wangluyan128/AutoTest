@@ -1,5 +1,9 @@
 com\example\demo\DemoApplication.class
 com\course\bean\User.class
+com\course\SpringContextHolder.class
+META-INF\spring-configuration-metadata.json
+com\example\demo\RedisPoolDemo.class
+com\course\JedisUtil.class
 com\course\config\SwaggerConfig.class
 com\course\server\MyGetMethod.class
 com\course\server\FileController.class

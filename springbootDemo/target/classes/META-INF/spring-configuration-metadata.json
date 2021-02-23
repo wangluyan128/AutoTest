@@ -1,0 +1,11 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.course.JedisUtil",
+      "name": "redis",
+      "type": "com.course.JedisUtil"
+    }
+  ],
+  "properties": []
+}

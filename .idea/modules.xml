@@ -3,16 +3,17 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ExcelDemo/ExcelDemo.iml" filepath="$PROJECT_DIR$/ExcelDemo/ExcelDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../LocustDemo/LocustDemo.iml" filepath="$PROJECT_DIR$/../LocustDemo/LocustDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../UIDemo/UIDemo.iml" filepath="$PROJECT_DIR$/../UIDemo/UIDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../appDemo/appDemo.iml" filepath="$PROJECT_DIR$/../appDemo/appDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LocustDemo/LocustDemo.iml" filepath="$PROJECT_DIR$/LocustDemo/LocustDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RedisDemo/RedisDemo.iml" filepath="$PROJECT_DIR$/RedisDemo/RedisDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UIDemo/UIDemo.iml" filepath="$PROJECT_DIR$/UIDemo/UIDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appDemo/appDemo.iml" filepath="$PROJECT_DIR$/appDemo/appDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/autoview/autoview.iml" filepath="$PROJECT_DIR$/autoview/autoview.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/demoTest.iml" filepath="$PROJECT_DIR$/demoTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/httpclientDemo/httpclientDemo.iml" filepath="$PROJECT_DIR$/httpclientDemo/httpclientDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/logDemo/logDemo.iml" filepath="$PROJECT_DIR$/logDemo/logDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/NodejsDemo/nodejsdemo.iml" filepath="$PROJECT_DIR$/NodejsDemo/nodejsdemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../pyMockDemo/pyMockDemo.iml" filepath="$PROJECT_DIR$/../pyMockDemo/pyMockDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pyMockDemo/pyMockDemo.iml" filepath="$PROJECT_DIR$/pyMockDemo/pyMockDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootDemo/springbootDemo.iml" filepath="$PROJECT_DIR$/springbootDemo/springbootDemo.iml" />
     </modules>
   </component>
