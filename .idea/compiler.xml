@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -13,6 +14,7 @@
         <module name="ExcelDemo" />
         <module name="httpclientDemo" />
         <module name="RedisDemo" />
+        <module name="springDemo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,7 +25,9 @@
       <module name="httpclientDemo" target="1.8" />
       <module name="logDemo" target="1.8" />
       <module name="RedisDemo" target="1.8" />
+      <module name="spDemo" target="1.8" />
       <module name="springbootDemo" target="1.8" />
+      <module name="springDemo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -35,6 +39,8 @@
       <module name="demo" options="-parameters" />
       <module name="httpclientDemo" options="-parameters" />
       <module name="logDemo" options="-parameters" />
+      <module name="spDemo" options="-parameters" />
+      <module name="springDemo" options="-parameters" />
       <module name="springbootDemo" options="-parameters" />
     </option>
   </component>

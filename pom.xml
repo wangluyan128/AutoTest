@@ -23,6 +23,8 @@
         <module>ExcelDemo</module>
         <module>logDemo</module>
         <module>RedisDemo</module>
+        <module>springDemo</module>
+
     </modules>
 
 
