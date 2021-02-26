@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/NodejsDemo/nodejsdemo.iml" filepath="$PROJECT_DIR$/NodejsDemo/nodejsdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/pyMockDemo/pyMockDemo.iml" filepath="$PROJECT_DIR$/pyMockDemo/pyMockDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/springDemo/springDemo.iml" filepath="$PROJECT_DIR$/springDemo/springDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springRedisDemo/springRedisDemo.iml" filepath="$PROJECT_DIR$/springRedisDemo/springRedisDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootDemo/springbootDemo.iml" filepath="$PROJECT_DIR$/springbootDemo/springbootDemo.iml" />
     </modules>
   </component>

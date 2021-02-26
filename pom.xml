@@ -24,6 +24,7 @@
         <module>logDemo</module>
         <module>RedisDemo</module>
         <module>springDemo</module>
+        <module>springRedisDemo</module>
 
     </modules>
 

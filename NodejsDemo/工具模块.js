@@ -274,7 +274,7 @@ server.listen(8088,function () {
 // 7	dns.resolveTxt(hostname, callback)
 // 和 dns.resolve() 类似, 仅能进行文本查询 (TXT 记录）。 addresses 是 2-d 文本记录数组。(比如，[ ['v=spf1 ip4:0.0.0.0 ', '~all' ] ]）。 每个子数组包含一条记录的 TXT 块。根据使用情况可以连接在一起，也可单独使用。
 // 8	dns.resolveSrv(hostname, callback)
-// 和 dns.resolve() 类似, 仅能进行服务记录查询 (SRV 记录）。 addresses 是 hostname可用的 SRV 记录数组。 SRV 记录属性有优先级（priority），权重（weight）, 端口（port）, 和名字（name） (比如，[{'priority': 10, 'weight': 5, 'port': 21223, 'name': 'service.example.com'}, ...]）。
+// 和 dns.resolve() 类似, 仅能进行服务记录查询 (SRV 记录）。 addresses 是 hostname可用的 SRV 记录数组。 SRV 记录属性有优先级（priority），权重（weight）, 端口（port）, 和名字（name） (比如，[{'priority': 10, 'weight': 5, 'port': 21223, 'name': 'com.redis.service.example.com'}, ...]）。
 // 9	dns.resolveSoa(hostname, callback)
 // 和 dns.resolve() 类似, 仅能查询权威记录(SOA 记录）。
 // 10	dns.resolveNs(hostname, callback)

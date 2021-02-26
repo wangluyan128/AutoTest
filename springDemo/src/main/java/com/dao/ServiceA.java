@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 public class ServiceA {
     //这里加了一个注解
-    @Value("${service.name}")
+    @Value("${com.redis.service.name}")
     private String serviceName;
     public String getServiceName(){
         return serviceName;

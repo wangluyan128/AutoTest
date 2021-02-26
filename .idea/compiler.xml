@@ -11,6 +11,7 @@
         <module name="logDemo" />
         <module name="springbootDemo" />
         <module name="autoview" />
+        <module name="springRedisDemo" />
         <module name="ExcelDemo" />
         <module name="httpclientDemo" />
         <module name="RedisDemo" />
@@ -28,6 +29,7 @@
       <module name="spDemo" target="1.8" />
       <module name="springbootDemo" target="1.8" />
       <module name="springDemo" target="1.8" />
+      <module name="springRedisDemo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -41,6 +43,7 @@
       <module name="logDemo" options="-parameters" />
       <module name="spDemo" options="-parameters" />
       <module name="springDemo" options="-parameters" />
+      <module name="springRedisDemo" options="-parameters" />
       <module name="springbootDemo" options="-parameters" />
     </option>
   </component>
