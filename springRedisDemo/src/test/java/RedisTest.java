@@ -18,18 +18,13 @@ public class RedisTest extends AbstractJUnit4SpringContextTests {
 
     @Autowired(required = false)
     private IUserDao userDao;
-
-    /**
-     * 新增
-     * <br>------------------------------<br>
-     */
+    /** 增加单个用户 */
     @Test
     public void testAddUser() {
-        User user = new User();
-        user.setId("user1");
-        user.setName("liuyazhuang");
-        boolean result = userDao.add(user);
+        User user = new User("user1", "password1", null);
+        Boolean result = userDao.add(user);
         Assert.assertTrue(result);
+        System.out.println("添加结果：" + result);
     }
 
     /**
