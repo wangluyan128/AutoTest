@@ -1,5 +1,6 @@
 import com.redis.entity.User;
 import com.redis.redisDao.IUserDao;
+import com.redis.service.UserDaoImpl;
 import org.junit.Test;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ import java.util.List;
 public class RedisTest extends AbstractJUnit4SpringContextTests {
 
     @Autowired(required = false)
-    private IUserDao userDao;
+    private UserDaoImpl userDao;
     /** 增加单个用户 */
     @Test
     public void testAddUser() {
@@ -119,7 +120,7 @@ public class RedisTest extends AbstractJUnit4SpringContextTests {
      * @param userDao the userDao to set
      */
     public void setUserDao(IUserDao userDao) {
-        this.userDao = userDao;
+        this.userDao = (UserDaoImpl) userDao;
     }
 }
 

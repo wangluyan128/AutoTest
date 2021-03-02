@@ -16,12 +16,14 @@
     <!--把标记了@Controller注解类转换为bean -->
     <context:component-scan base-package="com.redis"/>
     <!--加载文件-->
-    <!--context:property-placeholder location="classpath:db.properties"/-->
+    <context:property-placeholder location="classpath:redis.properties" file-encoding="UTF-8" />
 
 
     <!--redis服务封装-->
-    <bean id="redisService" class="com.redis.service.RedisService"></bean>
+    <!--bean id="redisService" class="com.redis.service.RedisService"></bean-->
 
+    <!--bean id="RedisUtil" class="com.redis.util.RedisUtil"/-->
+    <bean id="userDao" class="com.redis.service.UserDaoImpl"/>
 
     <!-- Spring-redis连接池管理工厂 -->
     <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
@@ -30,6 +32,7 @@
         <!-- 端口号 -->
         <property name="port" value="${redis.port}" />
         <property name="password" value="${redis.password}" />
+        <property name="database" value="${redis.database}"/>
         <!-- 超时时间 默认2000-->
         <property name="timeout" value="${redis.timeout}" />
         <!-- 连接池配置引用 -->
