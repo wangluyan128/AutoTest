@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"><!--default-init-method="init" default-destroy-method="destroy"默认销毁-->
+
+   <!--Definition for  textEditor bean -->
+    <bean id="textEditor" class="com.test1.TextEditor" autowire="byType"><!-- byName/constructor-->
+        <!--constructor-arg ref="spellChecker"/-->  <!--依赖注入-->
+        <!--property name="spellChecker">
+            <bean id="spellChecker" class="com.test1.SpellChecker"></bean--><!--bean内部注入，效果同依赖注入,bean注入时，不能有构造函数-->
+        <!--/property-->
+        <property name="name" value="Generic Text Editor"/>
+    </bean>
+    <!--Definition for spellChecker bean  -->
+    <bean id="spellChecker" class="com.test1.SpellChecker">
+    </bean>
+
+
+</beans>
+<!--p-namespace 以一种更简洁的方式重写
+beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="john-classic" class="com.example.Person"
+      p:name="John Doe"
+      p:spouse-ref="jane"/>
+</bean>
+
+<bean name="jane" class="com.example.Person"
+      p:name="John Doe"/>
+        </bean>
+
+</beans-->
