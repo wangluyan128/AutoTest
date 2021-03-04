@@ -1,8 +1,11 @@
+import com.redis.entity.SetRedisTemplate;
 import com.redis.util.RedisUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.RedisSerializer;
+import org.springframework.data.redis.serializer.StringRedisSerializer;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -12,7 +15,7 @@ import java.util.Map;
 import java.util.Set;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:applicationContext-*.xml")
+@ContextConfiguration("classpath:applicationContext-redis.xml")//多路径时@ContextConfiguration(locations = { "classpath*:/spring1.xml", "classpath*:/spring2.xml" })
 @SuppressWarnings("all")
 public class SpringRedisTest {
 
@@ -20,9 +23,27 @@ public class SpringRedisTest {
     private RedisUtil redisUtil;
     @Resource(name="redisTemplate")
     private RedisTemplate redisTemplate;
+    @Autowired
+    private SetRedisTemplate setRedisTemplate;
+
+
+
+
+
 
     @Test
     public void testSpringRedis() {
+        setRedisTemplate.setRedisTemplate(redisTemplate); //解决中文乱码
+
+       // redisTemplate.opsForValue().set(token,userId+"",60l,TimeUnit.SECONDS); //set redis 60s
+
+       // Long redisTime = redisTemplate.getExpire(token,TimeUnit.SECONDS);  //用rediskey 获取剩余redis时间
+
+       // if (redisTime!=-2){
+       //     redisTemplate.expire(token, redisTime+30, TimeUnit.SECONDS); //使用key重新 设置有效期时间
+       // }
+
+
         // stringRedisTemplate的操作
         // String读写
         redisTemplate.delete("myStr");
@@ -63,6 +84,4 @@ public class SpringRedisTest {
         }
         System.out.println("---------------");
     }
-
-
 }

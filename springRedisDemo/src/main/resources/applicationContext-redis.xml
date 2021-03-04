@@ -19,7 +19,7 @@
     <!--spring容器中最多只能定义一个context:property-placeholder
     引入多个属性，使用通配符：<context:property-placeholder location="classpath*:conf*.properties"/
     如果在多个spring配置文件中引入<context:property-placeholder .../>标签，最后需要加上ignore-unresolvable="true"，否则会报错-->
-    <context:property-placeholder location="classpath:redis.properties" file-encoding="UTF-8" />
+    <context:property-placeholder location="classpath:redis.properties" file-encoding="UTF-8" ignore-unresolvable="true"/>
 
 
     <!--redis服务封装-->

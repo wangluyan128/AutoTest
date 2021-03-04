@@ -22,7 +22,7 @@ public class RedisTest extends AbstractJUnit4SpringContextTests {
     /** 增加单个用户 */
     @Test
     public void testAddUser() {
-        User user = new User("user1", "password1", null);
+        User user = new User("user1", "张三", null);
         Boolean result = userDao.add(user);
         Assert.assertTrue(result);
         System.out.println("添加结果：" + result);
@@ -38,7 +38,7 @@ public class RedisTest extends AbstractJUnit4SpringContextTests {
         for (int i = 10; i < 50000; i++) {
             User user = new User();
             user.setId("user" + i);
-            user.setName("liuyazhuang" + i);
+            user.setName("刘洋" + i);
             list.add(user);
         }
         long begin = System.currentTimeMillis();
