@@ -1,0 +1,52 @@
+kind: pipeline
+type: kubernetes
+name: default
+
+node:
+  runner: k8s
+
+concurrency:
+  limit: 1
+
+steps:
+  - name: gauge
+    image: jniebuhr/gauge-java-runner
+    pull: if-not-exists
+    environment:
+      PLUGIN_REGISTRY:
+        from_secret: registry
+      PLUGIN_USERNAME:
+        from_secret: registry-user
+      PLUGIN_PASSWORD:
+        from_secret: registry-password
+      PLUGIN_REPO: nexus.mchz.com.cn:5050/databusiness/${DRONE_REPO_NAME}
+      PLUGIN_TAGS: ${DRONE_COMMIT_SHA:0:8}
+      PLUGIN_DRONE_DEPLOY_TO: ${DRONE_DEPLOY_TO=default}
+      PLUGIN_INSECURE: true
+    commands:
+      - gauge run specs/
+      #- tar -cvf report.tar /drone/src/reports/
+
+  - name: notify
+    image: drillster/drone-email
+    pull: if-not-exists
+    settings:
+      host: smtp.qq.com
+      port: 25
+      username: 381349463@qq.com
+      password: nqcnpacwujgibhcf
+      subject:  "Drone build:[{{build.status}}]{{repo.name}}({{repo.branch}})#{{build.number}}"
+      from: 381349463@qq.com
+      recipients: [ 381349463@qq.com ]
+      #attachment: report.tar
+      body: 'file:///drone/src/drone-email.html'
+    when:
+      status: [ changed, failure ]
+
+trigger:
+  branch:
+    - master
+  event:
+    - push
+    - custom
+    - promote
