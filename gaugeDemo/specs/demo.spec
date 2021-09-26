@@ -43,3 +43,7 @@ tags: episode_3
 
 ——————
 * 关机睡觉
+
+特殊参数< prefix:value >
+内联图片![Alt text](/path/to/img.jpg)或![Alt text](/path/to/img.jpg “Optional title”)
+例如This is [an example](http://getgauge.io “Title”) inline link.或[This link](http://github.com/getgauge/gauge) has no title attribute.

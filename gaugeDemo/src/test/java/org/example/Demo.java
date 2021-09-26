@@ -1,6 +1,8 @@
 package org.example;
 
 import com.thoughtworks.gauge.*;
+import com.thoughtworks.gauge.datastore.DataStore;
+import com.thoughtworks.gauge.datastore.DataStoreFactory;
 
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -28,13 +30,23 @@ public class Demo {
     }
 
     @BeforeScenario
-    public void beforescenario() {
+    public void beforescenario(ExecutionContext context) {
         System.out.printf("before scenario");
+        //获得上下文信息
+        String scenarioName = context.getCurrentScenario().getName();
+        System.out.printf("aaa "+scenarioName);
+        //在场景生命周期中保留添加的值，场景执行后，值被清除
+        DataStore scenarioStore = DataStoreFactory.getScenarioDataStore();
+        scenarioStore.put("element-id","455678");
+        String elementId = (String)scenarioStore.get("element-id");
+        System.out.printf("elementId:"+elementId);
     }
 
     @AfterScenario
-    public void afterscenario() {
+    public void afterscenario(ExecutionContext context) {
         System.out.printf("after scenario");
+        Specification currentSpecifcation = context.getCurrentSpecification();
+        System.out.printf("bbb "+currentSpecifcation);
     }
 
     @BeforeStep
