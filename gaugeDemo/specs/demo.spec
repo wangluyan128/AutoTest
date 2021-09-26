@@ -38,6 +38,8 @@ tags: episode_3
 * 主角 "韦小宝" 降临
 调用的是concept文件
 * 喜欢 "双儿" ,并和她结婚
+枚举调用
+* Navigate towards "NORTH"
 
 ——————
 * 关机睡觉

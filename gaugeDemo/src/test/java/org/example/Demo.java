@@ -8,35 +8,42 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class Demo {
 
     @BeforeSuite
-    public void BeforeSuite(){
+    public void BeforeSuite() {
         System.out.printf("before suite");
     }
+
     @AfterSuite
-    public void AfterSuite(){
+    public void AfterSuite() {
         System.out.printf("after suite");
     }
+
     @BeforeSpec
-    public void BeforeSpec(){
+    public void BeforeSpec() {
         System.out.printf("before spec");
     }
+
     @AfterSpec
-    public void AfterSpec(){
+    public void AfterSpec() {
         System.out.printf("after spec");
     }
+
     @BeforeScenario
-    public void beforescenario(){
+    public void beforescenario() {
         System.out.printf("before scenario");
     }
+
     @AfterScenario
-    public void afterscenario(){
+    public void afterscenario() {
         System.out.printf("after scenario");
     }
+
     @BeforeStep
-    public void beforestep(){
+    public void beforestep() {
         System.out.printf("before step");
     }
+
     @AfterStep
-    public void afterstep(){
+    public void afterstep() {
         System.out.printf("after step");
     }
 
@@ -59,6 +66,7 @@ public class Demo {
     public void implementation4(String name) {
         System.out.printf(name);
     }
+
     @ContinueOnFailure  //失败后继续执行
     @Step("联合 <乾隆> 打败 <鳌拜>")
     public void implementation5(Object arg0, Object arg1) {
@@ -75,9 +83,9 @@ public class Demo {
         for (TableRow row : gril.getTableRows()) {
             String word = row.getCell("girl");
             int expectedCount = Integer.parseInt(row.getCell("age"));
-            System.out.printf("姓名："+ word+ " "+"真实年龄："+ expectedCount);
+            System.out.printf("姓名：" + word + " " + "真实年龄：" + expectedCount);
 
-        //    assertThat(expectedCount).isEqualTo(actualCount);
+            //    assertThat(expectedCount).isEqualTo(actualCount);
         }
     }
 
@@ -94,5 +102,11 @@ public class Demo {
     @Step("追求到她，并同她结婚")
     public void implementation10() {
 
+    }
+
+    public enum Direction{NORTH,SOUTH,EAST,WEST;}
+    @Step("Navigate towards <SOUTH>")
+    public void implementation11(Direction direction) {
+        System.out.printf(direction.toString());
     }
 }
